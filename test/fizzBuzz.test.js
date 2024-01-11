@@ -38,4 +38,10 @@ describe("FizzBuzz", () =>{
     it("should return fizzBuzz if number provided is multiple of 15  " , ()=>{
         expect(FizzBuzz(15)).toBe("fizzbuzz"); 
     }); 
+    it("should return woff if number provided is 7 " , ()=>{
+        expect(FizzBuzz(7)).toBe("woff"); 
+    }); 
+    it("should return fizzwoff if number provided is multiple of 3 and 7  " , ()=>{
+        expect(FizzBuzz(21)).toBe("fizzwoff"); 
+    }); 
 }); 
