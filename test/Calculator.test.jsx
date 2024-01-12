@@ -33,80 +33,78 @@ describe("Testing Calculator", () => {
       screen.getByText(operation);
     });
   });
-  it("should render equal sing" , ()=>{
+  it("should render equal sing", () => {
     render(<Calculator />);
 
-    screen.getAllByText("="); 
-  }); 
-  it("should render a input", () =>{
+    screen.getAllByText("=");
+  });
+  it("should render a input", () => {
     render(<Calculator />);
 
     screen.getByRole("textbox");
-  }); 
-  it("should user input after clicking a number", ()=>{
-    render(<Calculator />);
-
-    const one = screen.getByText('1'); 
-    fireEvent.click(one); 
-
-    const input = screen.getByRole('textbox'); 
-    expect(input.value).toBe("1")
   });
-  it("should user input after clicking several numbers", ()=>{
+  it("should user input after clicking a number", () => {
     render(<Calculator />);
 
-    const one = screen.getByText('1'); 
-    fireEvent.click(one); 
+    const one = screen.getByText("1");
+    fireEvent.click(one);
 
-    const two = screen.getByText('2'); 
-    fireEvent.click(two); 
-
-    const three = screen.getByText('3'); 
-    fireEvent.click(three); 
-
-    const input = screen.getByRole('textbox'); 
-    expect(input.value).toBe("123")
-
-  }); 
-  it("should show user input after clicking  numbers and operations", ()=>{
+    const input = screen.getByRole("textbox");
+    expect(input.value).toBe("1");
+  });
+  it("should user input after clicking several numbers", () => {
     render(<Calculator />);
 
-    const one = screen.getByText('1'); 
-    fireEvent.click(one); 
+    const one = screen.getByText("1");
+    fireEvent.click(one);
 
-    const plus = screen.getByText('+'); 
-    fireEvent.click(plus); 
+    const two = screen.getByText("2");
+    fireEvent.click(two);
 
-    const two = screen.getByText('2'); 
-    fireEvent.click(two); 
+    const three = screen.getByText("3");
+    fireEvent.click(three);
 
-    const input = screen.getByRole('textbox'); 
-    expect(input.value).toBe("1+2");
-
-  }); 
-  it("should calculate based on user input and show the calculation", ()=>{
+    const input = screen.getByRole("textbox");
+    expect(input.value).toBe("123");
+  });
+  it("should show user input after clicking  numbers and operations", () => {
     render(<Calculator />);
-    const one = screen.getByText('1'); 
-    fireEvent.click(one); 
 
-    const plus = screen.getByText('+'); 
+    const one = screen.getByText("1");
+    fireEvent.click(one);
+
+    const plus = screen.getByText("+");
     fireEvent.click(plus);
 
-    fireEvent.click(one); 
+    const two = screen.getByText("2");
+    fireEvent.click(two);
 
-    const equalSing = screen.getByText('='); 
-    fireEvent.click(equalSing); 
-
-    const input = screen.getByRole('textbox'); 
-    expect(input.value).toBe("2");
-  }); 
-  it("clear operation", ()=>{
+    const input = screen.getByRole("textbox");
+    expect(input.value).toBe("1+2");
+  });
+  it("should calculate based on user input and show the calculation", () => {
     render(<Calculator />);
-    
-    const cleatSing = screen.getByText('clear'); 
-    fireEvent.click(cleatSing); 
+    const one = screen.getByText("1");
+    fireEvent.click(one);
 
-    const input = screen.getByRole('textbox'); 
-    expect(input.value).toBe('');
-  })
+    const plus = screen.getByText("+");
+    fireEvent.click(plus);
+
+    fireEvent.click(one);
+
+    const equalSing = screen.getByText("=");
+    fireEvent.click(equalSing);
+
+    const input = screen.getByRole("textbox");
+    expect(input.value).toBe("2");
+  });
+  it("clear operation", () => {
+    render(<Calculator />);
+
+    const cleatSing = screen.getByText("clear");
+    fireEvent.click(cleatSing);
+
+    const input = screen.getByRole("textbox");
+    expect(input.value).toBe("");
+  });
 });

@@ -9,26 +9,26 @@
  * Necesitamos una función que nos diga si podemos reconfigurar una máquina para que de un regalo pueda pasar
  *  a fabricar otro según las reglas mencionadas.
  */
-const canReconfigure = (from, to) =>{
-    if( typeof from !== "string") throw new Error("from isn't a string")
-    if(typeof to !== "string")  throw new Error("to isn't a string"); 
+const canReconfigure = (from, to) => {
+    if (typeof from !== "string") throw new Error("from isn't a string")
+    if (typeof to !== "string") throw new Error("to isn't a string");
 
     const sameLength = from.length === to.length;
-    if(!sameLength) return false; 
+    if (!sameLength) return false;
 
-    const hasSameUniqueLetters = new Set(from).size === new Set(to).size; 
-    if(!hasSameUniqueLetters) return false; 
+    const hasSameUniqueLetters = new Set(from).size === new Set(to).size;
+    if (!hasSameUniqueLetters) return false;
 
-    const transformations ={}
+    const transformations = {}
     for (let index = 0; index < from.length; index++) {
         const fromLetter = from[index];
-        const toLetter = to[index]; 
+        const toLetter = to[index];
 
-        const storedLetter = transformations[fromLetter]; 
-        if(storedLetter && storedLetter !== toLetter) return false;
-        transformations[fromLetter] = toLetter; 
+        const storedLetter = transformations[fromLetter];
+        if (storedLetter && storedLetter !== toLetter) return false;
+        transformations[fromLetter] = toLetter;
     }
-    return true; 
+    return true;
 }
 
 export default canReconfigure; 

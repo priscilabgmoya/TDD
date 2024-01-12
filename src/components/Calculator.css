@@ -1,48 +1,48 @@
-.btnNumbers{
-    width: 55px;
-    height: 55px;
-    border-radius: 20px ;
-    border: none; 
-    margin: 5px 2px;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 30px;
-    background-color: grey;
-    color: white;
+.btnNumbers {
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  border: none;
+  margin: 5px 2px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  background-color: grey;
+  color: white;
 }
-.btnOperation{
-    width: 40px;
-    height: 40px;
-    border-radius: 20px ;
-    border: none; 
-    margin: 5px 2px;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 30px;
-    background-color: orange;
-    color: white;
+.btnOperation {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  margin: 5px 2px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  background-color: orange;
+  color: white;
 }
-.btnEqual{
-    width: 60px;
-    border-radius: 20px ;
-    border: none; 
-    vertical-align: middle;
-    text-align: center;
-    font-size: 30px;
-    background-color: green;
-    color: white;
+.btnEqual {
+  width: 60px;
+  border-radius: 20px;
+  border: none;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  background-color: green;
+  color: white;
 }
-.btnClear{
-    width: 117px;
-    border-radius: 20px ;
-    border: none; 
-    vertical-align: middle;
-    text-align: center;
-    font-size: 30px;
-    background-color: red;
-    color: white; 
+.btnClear {
+  width: 117px;
+  border-radius: 20px;
+  border: none;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 30px;
+  background-color: red;
+  color: white;
 }
-.inputUser{
-    font-size: 30px;
-    width: 164px;
+.inputUser {
+  font-size: 30px;
+  width: 164px;
 }
